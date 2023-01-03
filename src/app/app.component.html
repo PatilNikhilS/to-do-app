@@ -1,0 +1,13 @@
+
+<div class="task_box">
+<input class="input_box" type="text" value={{taskDescription}} [(ngModel)]="taskDescription" />
+<button class="input_button" (click)="addTask()">Add Task</button>
+</div>
+
+<div class="task_box">
+  <ul>
+    <li *ngFor="let task of tasklistService.getTaskList()">
+      <app-task [task]="task"></app-task>
+    </li>
+   </ul>
+</div>
